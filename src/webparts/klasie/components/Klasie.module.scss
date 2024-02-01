@@ -1,4 +1,4 @@
-@import '~@fluentui/react/dist/sass/References.scss';
+@import "~@fluentui/react/dist/sass/References.scss";
 
 .klasie {
   overflow: hidden;
@@ -23,12 +23,73 @@
   a {
     text-decoration: none;
     color: "[theme:link, default:#03787c]";
-    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+    color: var(
+      --link
+    ); // note: CSS Custom Properties support is limited to modern browsers only
 
     &:hover {
       text-decoration: underline;
       color: "[theme:linkHovered, default: #014446]";
-      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+      color: var(
+        --linkHovered
+      ); // note: CSS Custom Properties support is limited to modern browsers only
     }
   }
+}
+
+.klasie {
+  font-size: x-large;
+}
+.QVersation {
+  ul {
+    margin-left: 0px;
+    li {
+      display: inline-block;
+      width: auto;
+      padding: 4px;
+      border-radius: 12px;
+    }
+  }
+}
+
+.Controls {
+  padding-left: 43px;
+  table {
+    width: -webkit-fill-availables;
+  }
+  button {
+    margin-left: 3px;
+    margin-top: 15px;
+  }
+  .PraatHier {
+    width: 250px;
+  }
+  .Comms {
+    font-size: 13px;
+    padding-top: 7px;
+  }
+}
+
+.KiesPratie {
+  color: inherit;
+}
+
+.CodeFrame {
+  border: 1px solid yellow;
+}
+
+.tool {
+  color: inherit;
+}
+.assistant {
+  color: #253259;
+}
+.function {
+  color: orange;
+}
+.system {
+  color: #a6401b;
+}
+.user {
+  color: #808c89;
 }

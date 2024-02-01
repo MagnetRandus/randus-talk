@@ -80,34 +80,6 @@ define("4d982091-dcda-4c3f-9239-df1ecbfce717_0.0.1", ["@microsoft/sp-property-pa
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/
-/******/ 	// Set the webpack public path
-/******/ 	(function () {
-/******/ 	  var scripts = document.getElementsByTagName('script');
-/******/ 	  var regex = /klasie\-web\-part\.js/i;
-/******/ 	  var publicPath;
-/******/
-/******/ 	  if (scripts && scripts.length) {
-/******/ 	    for (var i = 0; i < scripts.length; i++) {
-/******/ 	      if (!scripts[i]) continue;
-/******/ 	      var path = scripts[i].getAttribute('src');
-/******/ 	      if (path && path.match(regex)) {
-/******/ 	        publicPath = path.substring(0, path.lastIndexOf('/') + 1);
-/******/ 	        break;
-/******/ 	      }
-/******/ 	    }
-/******/ 	  }
-/******/
-/******/ 	  if (!publicPath) {
-/******/ 	    for (var global in window.__setWebpackPublicPathLoaderSrcRegistry__) {
-/******/ 	      if (global && global.match(regex)) {
-/******/ 	        publicPath = global.substring(0, global.lastIndexOf('/') + 1);
-/******/ 	        break;
-/******/ 	      }
-/******/ 	    }
-/******/ 	  }
-/******/ 	  __webpack_require__.p = publicPath;
-/******/ 	})();
-/******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = "oq9h");
 /******/ })
@@ -138,11 +110,22 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__26ea__;
 /* tslint:disable */
 __webpack_require__(/*! ./Klasie.module.css */ "sUTF");
 var styles = {
-    klasie: 'klasie_d25bacbe',
-    teams: 'teams_d25bacbe',
-    welcome: 'welcome_d25bacbe',
-    welcomeImage: 'welcomeImage_d25bacbe',
-    links: 'links_d25bacbe'
+    klasie: 'klasie_e9c90df0',
+    teams: 'teams_e9c90df0',
+    welcome: 'welcome_e9c90df0',
+    welcomeImage: 'welcomeImage_e9c90df0',
+    links: 'links_e9c90df0',
+    QVersation: 'QVersation_e9c90df0',
+    Controls: 'Controls_e9c90df0',
+    PraatHier: 'PraatHier_e9c90df0',
+    Comms: 'Comms_e9c90df0',
+    KiesPratie: 'KiesPratie_e9c90df0',
+    CodeFrame: 'CodeFrame_e9c90df0',
+    tool: 'tool_e9c90df0',
+    assistant: 'assistant_e9c90df0',
+    function: 'function_e9c90df0',
+    system: 'system_e9c90df0',
+    user: 'user_e9c90df0'
 };
 /* harmony default export */ __webpack_exports__["e"] = (styles);
 /* tslint:enable */ 
@@ -162,7 +145,7 @@ var styles = {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "JPst");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".klasie_d25bacbe{color:\"[theme:bodyText, default: #323130]\";color:var(--bodyText);overflow:hidden;padding:1em}.klasie_d25bacbe.teams_d25bacbe{font-family:Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif}.welcome_d25bacbe{text-align:center}.welcomeImage_d25bacbe{max-width:420px;width:100%}.links_d25bacbe a{color:\"[theme:link, default:#03787c]\";color:var(--link);text-decoration:none}.links_d25bacbe a:hover{color:\"[theme:linkHovered, default: #014446]\";color:var(--linkHovered);text-decoration:underline}", ""]);
+exports.push([module.i, ".klasie_e9c90df0{color:\"[theme:bodyText, default: #323130]\";color:var(--bodyText);overflow:hidden;padding:1em}.klasie_e9c90df0.teams_e9c90df0{font-family:Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif}.welcome_e9c90df0{text-align:center}.welcomeImage_e9c90df0{max-width:420px;width:100%}.links_e9c90df0 a{color:\"[theme:link, default:#03787c]\";color:var(--link);text-decoration:none}.links_e9c90df0 a:hover{color:\"[theme:linkHovered, default: #014446]\";color:var(--linkHovered);text-decoration:underline}.klasie_e9c90df0{font-size:x-large}.QVersation_e9c90df0 ul{margin-left:0}.QVersation_e9c90df0 ul li{border-radius:12px;display:inline-block;padding:4px;width:auto}.Controls_e9c90df0{padding-left:43px}.Controls_e9c90df0 table{width:-webkit-fill-availables}.Controls_e9c90df0 button{margin-left:3px;margin-top:15px}.Controls_e9c90df0 .PraatHier_e9c90df0{width:250px}.Controls_e9c90df0 .Comms_e9c90df0{font-size:13px;padding-top:7px}.KiesPratie_e9c90df0{color:inherit}.CodeFrame_e9c90df0{border:1px solid #ff0}.tool_e9c90df0{color:inherit}.assistant_e9c90df0{color:#253259}.function_e9c90df0{color:orange}.system_e9c90df0{color:#a6401b}.user_e9c90df0{color:#808c89}", ""]);
 // Exports
 module.exports = exports;
 
@@ -311,18 +294,6 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_UWqr__;
 
 /***/ }),
 
-/***/ "ah3T":
-/*!*****************************************************!*\
-  !*** ./lib/webparts/klasie/assets/welcome-dark.png ***!
-  \*****************************************************/
-/*! no static exports found */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "welcome-dark_dcd6e9e4aa4b30169bf8ab6002b643a7.png";
-
-/***/ }),
-
 /***/ "br4S":
 /*!*********************************************!*\
   !*** external "@microsoft/sp-webpart-base" ***!
@@ -398,53 +369,21 @@ var Klasie = /** @class */ (function (_super) {
     }
     Klasie.prototype.render = function () {
         var _a = this.props, description = _a.description, isDarkTheme = _a.isDarkTheme, environmentMessage = _a.environmentMessage, hasTeamsContext = _a.hasTeamsContext, userDisplayName = _a.userDisplayName;
-        return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("section", { className: "".concat(_Klasie_module_scss__WEBPACK_IMPORTED_MODULE_1__[/* default */ "e"].klasie, " ").concat(hasTeamsContext ? _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_1__[/* default */ "e"].teams : '') },
+        isDarkTheme ? console.log("Dark") : console.log("Light");
+        console.log(environmentMessage);
+        return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("section", { className: "".concat(_Klasie_module_scss__WEBPACK_IMPORTED_MODULE_1__[/* default */ "e"].klasie, " ").concat(hasTeamsContext ? _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_1__[/* default */ "e"].teams : "") },
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_1__[/* default */ "e"].welcome },
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("img", { alt: "", src: isDarkTheme ? __webpack_require__(/*! ../assets/welcome-dark.png */ "ah3T") : __webpack_require__(/*! ../assets/welcome-light.png */ "oArt"), className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_1__[/* default */ "e"].welcomeImage }),
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h2", null,
-                    "Well done, ",
+                    "Hi ",
                     Object(_microsoft_sp_lodash_subset__WEBPACK_IMPORTED_MODULE_2__["escape"])(userDisplayName),
                     "!"),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, environmentMessage),
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null,
-                    "Web part property value: ",
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("strong", null, Object(_microsoft_sp_lodash_subset__WEBPACK_IMPORTED_MODULE_2__["escape"])(description)))),
-            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null,
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h3", null, "Welcome to SharePoint Framework!"),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, "The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling."),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h4", null, "Learn more about SPFx development:"),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("ul", { className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_1__[/* default */ "e"].links },
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("li", null,
-                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { href: "https://aka.ms/spfx", target: "_blank", rel: "noreferrer" }, "SharePoint Framework Overview")),
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("li", null,
-                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { href: "https://aka.ms/spfx-yeoman-graph", target: "_blank", rel: "noreferrer" }, "Use Microsoft Graph in your solution")),
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("li", null,
-                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { href: "https://aka.ms/spfx-yeoman-teams", target: "_blank", rel: "noreferrer" }, "Build for Microsoft Teams using SharePoint Framework")),
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("li", null,
-                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { href: "https://aka.ms/spfx-yeoman-viva", target: "_blank", rel: "noreferrer" }, "Build for Microsoft Viva Connections using SharePoint Framework")),
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("li", null,
-                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { href: "https://aka.ms/spfx-yeoman-store", target: "_blank", rel: "noreferrer" }, "Publish SharePoint Framework applications to the marketplace")),
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("li", null,
-                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { href: "https://aka.ms/spfx-yeoman-api", target: "_blank", rel: "noreferrer" }, "SharePoint Framework API reference")),
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("li", null,
-                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { href: "https://aka.ms/m365pnp", target: "_blank", rel: "noreferrer" }, "Microsoft 365 Developer Community"))))));
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("strong", null, Object(_microsoft_sp_lodash_subset__WEBPACK_IMPORTED_MODULE_2__["escape"])(description))))));
     };
     return Klasie;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]));
 /* harmony default export */ __webpack_exports__["e"] = (Klasie);
 
-
-/***/ }),
-
-/***/ "oArt":
-/*!******************************************************!*\
-  !*** ./lib/webparts/klasie/assets/welcome-light.png ***!
-  \******************************************************/
-/*! no static exports found */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "welcome-light_1eaf582a9b78272e22113e1e733138b8.png";
 
 /***/ }),
 
