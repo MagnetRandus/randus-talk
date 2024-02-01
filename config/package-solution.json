@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "randus-talk-client-side-solution",
+    "id": "94bfe686-c9b8-4173-8e64-9906cd3c7a24",
+    "version": "0.0.0.2",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "Magnet-Randus",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "randus-talk description"
+      },
+      "longDescription": {
+        "default": "randus-talk description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "randus-talk Feature",
+        "description": "The feature that activates elements of the randus-talk solution.",
+        "id": "15bb2a69-a49c-4cfc-a9f9-5bfa64891172",
+        "version": "0.0.0.2"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/randus-talk.sppkg"
+  }
+}

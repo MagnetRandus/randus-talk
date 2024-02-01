@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "klasie-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/klasie/KlasieWebPart.js",
+          "manifest": "./src/webparts/klasie/KlasieWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "KlasieWebPartStrings": "lib/webparts/klasie/loc/{locale}.js"
+  }
+}
