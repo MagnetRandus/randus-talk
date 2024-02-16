@@ -19,14 +19,15 @@
         "default": "Advanced"
       },
       "title": {
-        "default": "Klasie"
+        "default": "Geselsie"
       },
       "description": {
         "default": "Klasie description"
       },
       "officeFabricIconFontName": "Page",
       "properties": {
-        "description": "Klasie"
+        "description": "Geselsie",
+        "Model": "GPT Version"
       }
     }
   ],

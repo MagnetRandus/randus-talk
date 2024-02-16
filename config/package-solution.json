@@ -3,7 +3,7 @@
   "solution": {
     "name": "randus-talk-client-side-solution",
     "id": "94bfe686-c9b8-4173-8e64-9906cd3c7a24",
-    "version": "0.0.0.2",
+    "version": "0.0.0.3",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
@@ -30,7 +30,7 @@
         "title": "randus-talk Feature",
         "description": "The feature that activates elements of the randus-talk solution.",
         "id": "15bb2a69-a49c-4cfc-a9f9-5bfa64891172",
-        "version": "0.0.0.2"
+        "version": "0.0.0.3"
       }
     ]
   },

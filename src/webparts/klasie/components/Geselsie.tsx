@@ -1,22 +1,17 @@
 import * as React from "react";
 
+import bridgedGap from "../api/talk";
+import { ITalk } from "./types/talk";
 import styles from "./Klasie.module.scss"; // Replace with your actual styles import
-import OpenAI from "openai";
-import { ChatCompletionMessageParam } from "openai/resources";
-import Stuur from "./Navigate";
+import { IKlasieWebPartProps } from "./IKlasieProps";
+import { cleanup } from "../tools/cleanup";
 
-interface iProps {
-  openai35: OpenAI;
-}
-
-const Klasie: React.FC<iProps> = ({ openai35: openai }) => {
-  const [myAsk, setMyAsk] = React.useState<ChatCompletionMessageParam>();
+const Geselsie: React.FC<IKlasieWebPartProps> = ({ GPTModel }) => {
+  const [myAsk, setMyAsk] = React.useState<ITalk>();
 
   const [comms, setComms] = React.useState<string>(`Resting`);
 
-  const [qVersation, setQVersation] = React.useState<
-    Array<ChatCompletionMessageParam>
-  >([
+  const [qVersation, setQVersation] = React.useState<Array<ITalk>>([
     {
       role: "system",
       content:
@@ -29,18 +24,15 @@ const Klasie: React.FC<iProps> = ({ openai35: openai }) => {
 
     try {
       setComms("Asking");
-      const response = await openai.chat.completions.create({
-        messages: [...qVersation, myAsk], // Immutable update
-        model: "gpt-3.5-turbo",
-      });
 
-      const reply = response.choices.map((h) => h.message);
+      const response = await bridgedGap(myAsk, GPTModel);
 
       setComms("Answered");
+
       setQVersation((prevQVersation) => [
         ...prevQVersation,
         myAsk,
-        { role: "assistant", content: reply[0].content },
+        response.data,
       ]);
     } catch (error) {
       console.error("Error calling OpenAI's API:", error);
@@ -52,22 +44,9 @@ const Klasie: React.FC<iProps> = ({ openai35: openai }) => {
   const refVra = React.useRef<HTMLButtonElement>(null);
   const refAsk = React.useRef<HTMLInputElement>(null);
 
-  // Inside Klasie component
-  // The rest of the Klasie component remains unchanged until useEffect
-
-  React.useEffect(() => {
-    if (comms !== "Resting" && comms !== "Asking") {
-      const timerId = setTimeout(() => {
-        setComms("Resting");
-      }, 4000);
-
-      return () => clearTimeout(timerId);
-    }
-  }, [comms]); // This effect depends on the 'comms' state
-
   return (
     <div>
-      <div className={styles.klasie}>
+      <div className={styles.main}>
         <section>
           <h3>Kl@sie</h3>
           <div className={styles.QVersation}>
@@ -76,7 +55,11 @@ const Klasie: React.FC<iProps> = ({ openai35: openai }) => {
                 .filter((h) => h.role !== "system")
                 .map((h, i) => (
                   <li key={i} className={`${styles[h.role]}`}>
-                    {String(h.content)}
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: cleanup(String(h.content)),
+                      }}
+                    />
                   </li>
                 ))}
             </ul>
@@ -135,7 +118,6 @@ const Klasie: React.FC<iProps> = ({ openai35: openai }) => {
                 </tbody>
               </table>
             </section>
-            <Stuur />
           </div>
         </section>
       </div>
@@ -143,4 +125,4 @@ const Klasie: React.FC<iProps> = ({ openai35: openai }) => {
   );
 };
 
-export default Klasie;
+export default Geselsie;

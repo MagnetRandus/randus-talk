@@ -1,6 +1,6 @@
 @import "~@fluentui/react/dist/sass/References.scss";
 
-.klasie {
+.main {
   overflow: hidden;
   padding: 1em;
   color: "[theme:bodyText, default: #323130]";
@@ -8,15 +8,6 @@
   &.teams {
     font-family: $ms-font-family-fallbacks;
   }
-}
-
-.welcome {
-  text-align: center;
-}
-
-.welcomeImage {
-  width: 100%;
-  max-width: 420px;
 }
 
 .links {
@@ -36,11 +27,8 @@
     }
   }
 }
-
-.klasie {
-  font-size: x-large;
-}
 .QVersation {
+  text-align: left;
   ul {
     margin-left: 0px;
     li {
@@ -50,6 +38,45 @@
       border-radius: 12px;
     }
   }
+}
+
+// .Controls {
+//   padding-left: 43px;
+//   table {
+//     width: -webkit-fill-availables;
+//   }
+//   button {
+//     margin-left: 3px;
+//     margin-top: 15px;
+//   }
+//   .PraatHier {
+//     width: 250px;
+//   }
+//   .Comms {
+//     font-size: 13px;
+//     padding-top: 7px;
+//   }
+// }
+
+// .KiesPratie {
+//   color: inherit;
+// }
+
+// .CodeFrame {
+//   border: 1px solid yellow;
+// }
+
+.assistant {
+  color: #253259;
+}
+.function {
+  color: orange;
+}
+.system {
+  color: #a6401b;
+}
+.user {
+  color: #808c89;
 }
 
 .Controls {
@@ -70,26 +97,54 @@
   }
 }
 
-.KiesPratie {
-  color: inherit;
-}
+// /*
+//  * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+//  *        See https://github.com/webpack-contrib/sass-loader#imports
+//  */
 
-.CodeFrame {
-  border: 1px solid yellow;
-}
+// body {
+//   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+//   background-color: black;
+//   color: #808c89;
 
-.tool {
-  color: inherit;
-}
-.assistant {
-  color: #253259;
-}
-.function {
-  color: orange;
-}
-.system {
-  color: #a6401b;
-}
-.user {
-  color: #808c89;
-}
+//   input {
+//     background-color: #253259;
+//     color: #808c89;
+//   }
+// }
+
+// .klasie {
+//   font-size: x-large;
+// }
+// .QVersation {
+//   .assistant {
+//     color: #253259;
+//   }
+//   .function {
+//     color: orange;
+//   }
+//   .system {
+//     color: #a6401b;
+//   }
+//   .user {
+//     color: #808c89;
+//   }
+
+//   ul {
+//     margin-left: 0px;
+//     li {
+//       display: inline-block;
+//       width: auto;
+//       padding: 4px;
+//       border-radius: 12px;
+//     }
+//   }
+// }
+
+// .KiesPratie {
+//   color: inherit;
+// }
+
+// .CodeFrame {
+//   border: 1px solid yellow;
+// }

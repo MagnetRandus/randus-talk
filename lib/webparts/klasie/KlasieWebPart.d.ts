@@ -1,10 +1,8 @@
-import { Version } from '@microsoft/sp-core-library';
-import { type IPropertyPaneConfiguration } from '@microsoft/sp-property-pane';
-import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
-import { IReadonlyTheme } from '@microsoft/sp-component-base';
-export interface IKlasieWebPartProps {
-    description: string;
-}
+import { Version } from "@microsoft/sp-core-library";
+import { type IPropertyPaneConfiguration } from "@microsoft/sp-property-pane";
+import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
+import { IReadonlyTheme } from "@microsoft/sp-component-base";
+import { IKlasieWebPartProps } from "./components/IKlasieProps";
 export default class KlasieWebPart extends BaseClientSideWebPart<IKlasieWebPartProps> {
     private _isDarkTheme;
     private _environmentMessage;

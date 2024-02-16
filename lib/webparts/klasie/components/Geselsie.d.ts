@@ -1,8 +1,5 @@
 import * as React from "react";
-import OpenAI from "openai";
-interface iProps {
-    openai35: OpenAI;
-}
-declare const Klasie: React.FC<iProps>;
-export default Klasie;
+import { IKlasieWebPartProps } from "./IKlasieProps";
+declare const Geselsie: React.FC<IKlasieWebPartProps>;
+export default Geselsie;
 //# sourceMappingURL=Geselsie.d.ts.map

@@ -11,9 +11,12 @@ declare interface IKlasieWebPartStrings {
   AppOfficeEnvironment: string;
   AppOutlookEnvironment: string;
   UnknownEnvironment: string;
+  APIKey: string;
+
+  GPTModel: string;
 }
 
-declare module 'KlasieWebPartStrings' {
+declare module "KlasieWebPartStrings" {
   const strings: IKlasieWebPartStrings;
   export = strings;
 }
