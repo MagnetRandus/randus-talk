@@ -130,3 +130,5 @@ dist
 .pnp.*
 deploy-azure-storage*
 apikeys.json
+lib/
+lib/webparts/

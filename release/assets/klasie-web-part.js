@@ -1,4 +1,4 @@
-define("4d982091-dcda-4c3f-9239-df1ecbfce717_0.0.1", ["@microsoft/sp-property-pane","@microsoft/sp-lodash-subset","KlasieWebPartStrings","@microsoft/sp-core-library","@microsoft/sp-webpart-base","react","react-dom"], function(__WEBPACK_EXTERNAL_MODULE__26ea__, __WEBPACK_EXTERNAL_MODULE_Pk8u__, __WEBPACK_EXTERNAL_MODULE_QT9j__, __WEBPACK_EXTERNAL_MODULE_UWqr__, __WEBPACK_EXTERNAL_MODULE_br4S__, __WEBPACK_EXTERNAL_MODULE_cDcd__, __WEBPACK_EXTERNAL_MODULE_faye__) { return /******/ (function(modules) { // webpackBootstrap
+define("4d982091-dcda-4c3f-9239-df1ecbfce717_0.0.1", ["@microsoft/sp-property-pane","@microsoft/sp-lodash-subset","KlasieWebPartStrings","@microsoft/sp-core-library","@microsoft/sp-webpart-base","react","react-dom","@microsoft/sp-http"], function(__WEBPACK_EXTERNAL_MODULE__26ea__, __WEBPACK_EXTERNAL_MODULE_Pk8u__, __WEBPACK_EXTERNAL_MODULE_QT9j__, __WEBPACK_EXTERNAL_MODULE_UWqr__, __WEBPACK_EXTERNAL_MODULE_br4S__, __WEBPACK_EXTERNAL_MODULE_cDcd__, __WEBPACK_EXTERNAL_MODULE_faye__, __WEBPACK_EXTERNAL_MODULE_vlQI__) { return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -195,17 +195,18 @@ function isAbsoluteURL(url) {
 /* tslint:disable */
 __webpack_require__(/*! ./Klasie.module.css */ "sUTF");
 var styles = {
-    main: 'main_7c78a996',
-    teams: 'teams_7c78a996',
-    links: 'links_7c78a996',
-    QVersation: 'QVersation_7c78a996',
-    assistant: 'assistant_7c78a996',
-    function: 'function_7c78a996',
-    system: 'system_7c78a996',
-    user: 'user_7c78a996',
-    Controls: 'Controls_7c78a996',
-    PraatHier: 'PraatHier_7c78a996',
-    Comms: 'Comms_7c78a996'
+    main: 'main_bea6fb22',
+    teams: 'teams_bea6fb22',
+    interface: 'interface_bea6fb22',
+    links: 'links_bea6fb22',
+    assistant: 'assistant_bea6fb22',
+    function: 'function_bea6fb22',
+    system: 'system_bea6fb22',
+    user: 'user_bea6fb22',
+    HideMe: 'HideMe_bea6fb22',
+    PraatHier: 'PraatHier_bea6fb22',
+    Comms: 'Comms_bea6fb22',
+    Stuur: 'Stuur_bea6fb22'
 };
 /* harmony default export */ __webpack_exports__["a"] = (styles);
 /* tslint:enable */ 
@@ -1366,7 +1367,7 @@ function spread(callback) {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "JPst");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".main_7c78a996{color:\"[theme:bodyText, default: #323130]\";color:var(--bodyText);overflow:hidden;padding:1em}.main_7c78a996.teams_7c78a996{font-family:Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif}.links_7c78a996 a{color:\"[theme:link, default:#03787c]\";color:var(--link);text-decoration:none}.links_7c78a996 a:hover{color:\"[theme:linkHovered, default: #014446]\";color:var(--linkHovered);text-decoration:underline}.QVersation_7c78a996{text-align:left}.QVersation_7c78a996 ul{margin-left:0}.QVersation_7c78a996 ul li{border-radius:12px;display:inline-block;padding:4px;width:auto}.assistant_7c78a996{color:#253259}.function_7c78a996{color:orange}.system_7c78a996{color:#a6401b}.user_7c78a996{color:#808c89}.Controls_7c78a996{padding-left:43px}.Controls_7c78a996 table{width:-webkit-fill-availables}.Controls_7c78a996 button{margin-left:3px;margin-top:15px}.Controls_7c78a996 .PraatHier_7c78a996{width:250px}.Controls_7c78a996 .Comms_7c78a996{font-size:13px;padding-top:7px}", ""]);
+exports.push([module.i, ".main_bea6fb22{color:\"[theme:bodyText, default: #323130]\";color:var(--bodyText);overflow:hidden;padding:1em}.main_bea6fb22.teams_bea6fb22{font-family:Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif}.interface_bea6fb22{border:1px solid #253259;width:100%}.interface_bea6fb22 table{width:-webkit-fill-availables}.interface_bea6fb22 table td{width:50%}.interface_bea6fb22 textarea{background-color:rgba(50,151,89,.5);width:100%}.links_bea6fb22 a{color:\"[theme:link, default:#03787c]\";color:var(--link);text-decoration:none}.links_bea6fb22 a:hover{color:\"[theme:linkHovered, default: #014446]\";color:var(--linkHovered);text-decoration:underline}.assistant_bea6fb22{color:#253259}.function_bea6fb22{color:orange}.system_bea6fb22{color:#a6401b}.user_bea6fb22{color:#808c89}.HideMe_bea6fb22{display:none}.PraatHier_bea6fb22{word-wrap:normal;height:-moz-fit-content;height:fit-content;width:100%}.Comms_bea6fb22{font-size:13px;padding-top:7px}.Stuur_bea6fb22{float:right}", ""]);
 // Exports
 module.exports = exports;
 
@@ -3771,7 +3772,6 @@ const isResolvedHandle = (adapter) => _utils_js__WEBPACK_IMPORTED_MODULE_0__[/* 
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _api_talk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../api/talk */ "qrG0");
 /* harmony import */ var _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Klasie.module.scss */ "3VYK");
-/* harmony import */ var _tools_cleanup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../tools/cleanup */ "zfKz");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -3819,90 +3819,89 @@ var __spreadArray = (undefined && undefined.__spreadArray) || function (to, from
 };
 
 
- // Replace with your actual styles import
 
+ // Replace with your actual styles import
 var Geselsie = function (_a) {
-    var GPTModel = _a.GPTModel;
-    var _b = react__WEBPACK_IMPORTED_MODULE_0__["useState"](), myAsk = _b[0], setMyAsk = _b[1];
-    var _c = react__WEBPACK_IMPORTED_MODULE_0__["useState"]("Resting"), comms = _c[0], setComms = _c[1];
-    var _d = react__WEBPACK_IMPORTED_MODULE_0__["useState"]([
-        {
-            role: "system",
-            content: "Your name is Klasie and you are a helpful assistant that speaks Afrikaans.",
-        },
-    ]), qVersation = _d[0], setQVersation = _d[1];
-    var engage = function () { return __awaiter(void 0, void 0, void 0, function () {
-        var response_1, error_1;
+    var cnv = _a.cnv, cnvId = _a.cnvId, REST = _a.REST;
+    var _b = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("Ek wil graag 'n troeteldier hê, wat sal jy voorstel is 'n goeie een vir 'n beginner?"), inputValue = _b[0], setInputValue = _b[1];
+    var _c = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(cnv), conversation = _c[0], setConversation = _c[1];
+    var _d = react__WEBPACK_IMPORTED_MODULE_0__["useState"]("Resting"), comms = _d[0], setComms = _d[1];
+    var refLastAnswer = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](null);
+    var refComms = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](null);
+    var refAsk = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](null);
+    var refVra = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](null);
+    var handleInputChange = function (e) {
+        setInputValue(e.target.value);
+    };
+    var handleSubmit = function (e) { return __awaiter(void 0, void 0, void 0, function () {
+        var q, response, err_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    if (!myAsk)
-                        return [2 /*return*/]; // Safety check
+                    e.preventDefault();
+                    setComms("Asking");
                     _a.label = 1;
                 case 1:
                     _a.trys.push([1, 3, , 4]);
-                    setComms("Asking");
-                    return [4 /*yield*/, Object(_api_talk__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(myAsk, GPTModel)];
+                    q = {
+                        role: "user",
+                        content: inputValue,
+                    };
+                    return [4 /*yield*/, Object(_api_talk__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(__spreadArray(__spreadArray([], conversation, true), [q], false), "gpt-3.5-turbo", REST, cnvId)];
                 case 2:
-                    response_1 = _a.sent();
+                    response = _a.sent();
+                    setConversation(response);
                     setComms("Answered");
-                    setQVersation(function (prevQVersation) { return __spreadArray(__spreadArray([], prevQVersation, true), [
-                        myAsk,
-                        response_1.data,
-                    ], false); });
                     return [3 /*break*/, 4];
                 case 3:
-                    error_1 = _a.sent();
-                    console.error("Error calling OpenAI's API:", error_1);
-                    setComms("Error");
+                    err_1 = _a.sent();
+                    if (err_1 instanceof Error)
+                        setComms(err_1.message);
                     return [3 /*break*/, 4];
                 case 4: return [2 /*return*/];
             }
         });
     }); };
-    var refComms = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](null);
-    var refVra = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](null);
-    var refAsk = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](null);
-    return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null,
-        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].main },
-            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("section", null,
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h3", null, "Kl@sie"),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].QVersation },
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("ul", null, qVersation
-                        .filter(function (h) { return h.role !== "system"; })
-                        .map(function (h, i) { return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("li", { key: i, className: "".concat(_Klasie_module_scss__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"][h.role]) },
-                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { dangerouslySetInnerHTML: {
-                                __html: Object(_tools_cleanup__WEBPACK_IMPORTED_MODULE_3__[/* cleanup */ "a"])(String(h.content)),
-                            } }))); })),
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("section", { className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].Controls },
-                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("table", null,
-                            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("tbody", null,
-                                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("tr", null,
-                                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("td", null,
-                                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { type: "text", name: "PraatHier", id: "PraatHier", placeholder: "Praat hier", ref: refAsk, className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].PraatHier, onKeyUp: function (ev) {
-                                                if (ev.key == "Enter") {
-                                                    if (refVra.current) {
-                                                        refVra.current.click();
-                                                    }
-                                                }
-                                            }, onChange: function (ev) {
-                                                setComms("Typing");
-                                                setMyAsk({
-                                                    role: "user",
-                                                    content: "".concat(ev.target.value),
-                                                });
-                                            } })),
-                                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("td", null,
-                                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null,
-                                            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { ref: refComms, className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].Comms }, comms)))),
-                                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("tr", null,
-                                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("td", null,
-                                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { ref: refVra, type: "button", onClick: function () {
-                                                engage();
-                                                if (refAsk.current)
-                                                    refAsk.current.value = "";
-                                            } }, "Praat")),
-                                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("td", null, "\u00A0"))))))))));
+    react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](function () {
+        if (refLastAnswer.current) {
+            refLastAnswer.current.innerHTML = conversation.slice(-1)[0].content;
+        }
+    }, [conversation]);
+    return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("form", { className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].main, onSubmit: handleSubmit },
+        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("table", { className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].interface },
+            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("thead", null,
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("tr", null,
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("td", null, "Conversation Id:"),
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("td", null, cnvId)),
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("tr", null,
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("td", null, "Comms"),
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("td", null,
+                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { ref: refComms, className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].Comms }, comms)))),
+            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("tbody", null,
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("tr", null,
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("td", { colSpan: 2 },
+                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h3", null, "Gebruiker"))),
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("tr", null,
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("td", { colSpan: 2 },
+                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("textarea", { name: "PraatHier", id: "PraatHier", placeholder: "Praat hier", ref: refAsk, className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].PraatHier, onKeyUp: function (ev) {
+                                if (ev.key == "Enter") {
+                                    if (refVra.current) {
+                                        refVra.current.click();
+                                    }
+                                }
+                            }, onChange: function (ev) {
+                                setComms("Typing");
+                                handleInputChange(ev);
+                            }, value: inputValue }),
+                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("br", null),
+                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("br", null),
+                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { type: "submit", className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].Stuur }, "Stuur vraag"))),
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("tr", null,
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("td", { colSpan: 2 },
+                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h3", null, "Kunsmatige Intelligensie"))),
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("tr", null,
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("td", { colSpan: 2 },
+                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { lang: "af", ref: refLastAnswer, contentEditable: "true", suppressContentEditableWarning: true }, refLastAnswer.current ? conversation.slice(-1)[0].content : "Nothing yet...")))))));
 };
 /* harmony default export */ __webpack_exports__["a"] = (Geselsie);
 
@@ -4551,10 +4550,282 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_br4S__;
   !*** external "react" ***!
   \************************/
 /*! no static exports found */
-/*! exports used: Component, createElement, useRef, useState */
+/*! exports used: Component, createElement, useEffect, useRef, useState */
 /***/ (function(module, exports) {
 
 module.exports = __WEBPACK_EXTERNAL_MODULE_cDcd__;
+
+/***/ }),
+
+/***/ "dVsX":
+/*!*********************************************!*\
+  !*** ./lib/@toolshed/services/r-methods.js ***!
+  \*********************************************/
+/*! exports provided: r_common, r_itemFromList, r_getfolderbyserverrelativeurl */
+/*! exports used: r_common, r_itemFromList */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return r_common; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return r_itemFromList; });
+/* unused harmony export r_getfolderbyserverrelativeurl */
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var r_common = /** @class */ (function () {
+    function r_common(uri) {
+        this.uri = uri;
+    }
+    Object.defineProperty(r_common.prototype, "ListName", {
+        get: function () {
+            if (typeof this.lstname === "undefined")
+                throw new TypeError("ListName is undefined");
+            return this.lstname;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(r_common.prototype, "URI", {
+        get: function () {
+            return this.uri;
+        },
+        set: function (v) {
+            this.uri = v;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return r_common;
+}());
+
+var r_itemFromList = /** @class */ (function (_super) {
+    __extends(r_itemFromList, _super);
+    function r_itemFromList(listName) {
+        var _this = _super.call(this, "/web/lists/getbytitle('".concat(listName, "')")) || this;
+        _this.lstname = listName;
+        return _this;
+    }
+    /**
+     * Used to fetch all items and as the URI for Creating an Item in a list
+     * @returns r_itemFromList
+     */
+    r_itemFromList.prototype.AllItems = function () {
+        this.URI = "".concat(this.URI, "/Items?$top=5000");
+        return this;
+    };
+    r_itemFromList.prototype.ByFieldValue = function (fieldname, fieldvalue, select, expand, orderby) {
+        if (expand === void 0) { expand = []; }
+        if (orderby === void 0) { orderby = []; }
+        this.URI = "".concat(this.URI, "/Items?$select=").concat(typeof select !== "string" ? select.map(function (x) { return x; }) : select, "&$filter=").concat(fieldname, " eq ").concat(fieldvalue);
+        this.URI += "&$expand=".concat(expand.join(","), "&$orderby=").concat(orderby.join(","));
+        console.log("URI: \n\n\n".concat(this.URI, "\n\n\n"));
+        return this;
+    };
+    r_itemFromList.prototype.ByRecentlyUploaded = function () {
+        var select = ["Id", "FileRef", "Created", "FieldValuesAsText/FileLeafRef"];
+        var expand = ["FieldValuesAsText"];
+        var today = new Date();
+        today.setUTCHours(0, 0, 0, 0); //After 12pm for today
+        var dsTodayStart = today.toISOString();
+        var filter = ["Created ge '".concat(dsTodayStart, "'")];
+        this.URI = "".concat(this.URI, "/Items?$select=").concat(select.join(","), "&$expand=").concat(expand.join(","), "&$filter=").concat(filter.join(","));
+        return this;
+    };
+    r_itemFromList.prototype.ById = function (ItemId) {
+        this.URI = "".concat(this.URI, "/Items(").concat(ItemId, ")");
+        return this;
+    };
+    return r_itemFromList;
+}(r_common));
+
+var r_getfolderbyserverrelativeurl = /** @class */ (function (_super) {
+    __extends(r_getfolderbyserverrelativeurl, _super);
+    function r_getfolderbyserverrelativeurl(serverRelativeUrlToFolder) {
+        return _super.call(this, "/web/getfolderbyserverrelativeurl('".concat(serverRelativeUrlToFolder, "')/files")) || this;
+    }
+    r_getfolderbyserverrelativeurl.prototype.add = function (filename, overwrite) {
+        if (overwrite === void 0) { overwrite = true; }
+        this.URI = "".concat(this.URI, "/add(overwrite=").concat(overwrite, ", url='").concat(filename, "')");
+        return this;
+    };
+    r_getfolderbyserverrelativeurl.prototype.getFiles = function () {
+        return this;
+    };
+    return r_getfolderbyserverrelativeurl;
+}(r_common));
+
+// namespace oLISTS {
+//     export interface RootObject {
+//         __metadata: Metadata;
+//         FirstUniqueAncestorSecurableObject: FirstUniqueAncestorSecurableObject;
+//         RoleAssignments: FirstUniqueAncestorSecurableObject;
+//         Author: FirstUniqueAncestorSecurableObject;
+//         ContentTypes: FirstUniqueAncestorSecurableObject;
+//         CreatablesInfo: FirstUniqueAncestorSecurableObject;
+//         DefaultView: FirstUniqueAncestorSecurableObject;
+//         DescriptionResource: FirstUniqueAncestorSecurableObject;
+//         EventReceivers: FirstUniqueAncestorSecurableObject;
+//         Fields: FirstUniqueAncestorSecurableObject;
+//         Forms: FirstUniqueAncestorSecurableObject;
+//         InformationRightsManagementSettings: FirstUniqueAncestorSecurableObject;
+//         Items: FirstUniqueAncestorSecurableObject;
+//         ParentWeb: FirstUniqueAncestorSecurableObject;
+//         RootFolder: FirstUniqueAncestorSecurableObject;
+//         Subscriptions: FirstUniqueAncestorSecurableObject;
+//         TitleResource: FirstUniqueAncestorSecurableObject;
+//         UserCustomActions: FirstUniqueAncestorSecurableObject;
+//         Views: FirstUniqueAncestorSecurableObject;
+//         WorkflowAssociations: FirstUniqueAncestorSecurableObject;
+//         AllowContentTypes: boolean;
+//         BaseTemplate: number;
+//         BaseType: number;
+//         ContentTypesEnabled: boolean;
+//         CrawlNonDefaultViews: boolean;
+//         Created: string;
+//         CurrentChangeToken: CurrentChangeToken;
+//         DefaultContentApprovalWorkflowId: string;
+//         DefaultItemOpenUseListSetting: boolean;
+//         Description: string;
+//         Direction: string;
+//         DisableCommenting: boolean;
+//         DisableGridEditing: boolean;
+//         DocumentTemplateUrl?: string;
+//         DraftVersionVisibility: number;
+//         EnableAttachments: boolean;
+//         EnableFolderCreation: boolean;
+//         EnableMinorVersions: boolean;
+//         EnableModeration: boolean;
+//         EnableRequestSignOff: boolean;
+//         EnableVersioning: boolean;
+//         EntityTypeName: string;
+//         ExemptFromBlockDownloadOfNonViewableFiles: boolean;
+//         FileSavePostProcessingEnabled: boolean;
+//         ForceCheckout: boolean;
+//         HasExternalDataSource: boolean;
+//         Hidden: boolean;
+//         Id: string;
+//         ImagePath: ImagePath;
+//         ImageUrl: string;
+//         DefaultSensitivityLabelForLibrary: string;
+//         IrmEnabled: boolean;
+//         IrmExpire: boolean;
+//         IrmReject: boolean;
+//         IsApplicationList: boolean;
+//         IsCatalog: boolean;
+//         IsPrivate: boolean;
+//         ItemCount: number;
+//         LastItemDeletedDate: string;
+//         LastItemModifiedDate: string;
+//         LastItemUserModifiedDate: string;
+//         ListExperienceOptions: number;
+//         ListItemEntityTypeFullName: string;
+//         MajorVersionLimit: number;
+//         MajorWithMinorVersionsLimit: number;
+//         MultipleDataList: boolean;
+//         NoCrawl: boolean;
+//         ParentWebPath: ImagePath;
+//         ParentWebUrl: string;
+//         ParserDisabled: boolean;
+//         ServerTemplateCanCreateFolders: boolean;
+//         TemplateFeatureId: string;
+//         Title: string;
+//     }
+//     interface ImagePath {
+//         __metadata: Metadata2;
+//         DecodedUrl: string;
+//     }
+//     interface CurrentChangeToken {
+//         __metadata: Metadata2;
+//         StringValue: string;
+//     }
+//     interface Metadata2 {
+//         type: string;
+//     }
+//     interface FirstUniqueAncestorSecurableObject {
+//         __deferred: Deferred;
+//     }
+//     interface Deferred {
+//         uri: string;
+//     }
+//     interface Metadata {
+//         id: string;
+//         uri: string;
+//         etag: string;
+//         type: string;
+//     }
+// }
+// interface Fields {
+//     internalName: string
+//     displayName: string;
+//     TypeAsString: string;
+// }
+// interface infContentType {
+//     Id: string;
+//     Name: string;
+//     fields: Fields[]
+// }
+// class spLstInfo {
+//     displayFormUrl: string;
+//     editFormUrl: string;
+//     newFormUrl: string;
+//     internalName: string
+//     displayName: string;
+//     contentTypes: Array<infContentType>;
+// }
+/**
+ * This code is replace by the superior bit that took me 10 years to find :)
+ *
+ * // export class rUri_listProperties extends r_common {
+//     constructor(lstGuid: string) {
+//         super();
+//         const lstInfo = new spLstInfo();
+//         lstInfo.contentTypes = new Array<infContentType>();
+
+//         const select = [
+//             'Id',
+//             'Title',
+//             'ContentTypes',
+//             'ContentTypes/id',
+//             'ContentTypes/Fields',
+//             'ContentTypes/Name',
+//             'Description',
+//             'RootFolder',
+//             'EntityTypeName',
+//             'ListItemEntityTypeFullName',
+//             'Forms',
+//             'Forms/ServerRelativeUrl',
+//             'Forms/FormType'
+//         ] as Array<keyof oLISTS.RootObject>;
+
+//         const expand = [
+//             'Forms',
+//             'RootFolder',
+//             'ContentTypes',
+//             'ContentTypes/Fields', //TODO:  Remember to narrow tihs down!
+//             // 'FieldValuesAsHtml',
+//         ];
+
+//         const params = `${`$select=${select.join(',')}&$expand=${expand.join(',')}`}`;
+//         this.URI = `web/lists(guid'${lstGuid}')?${params}`;
+//     }
+
+// }
+ *
+ *
+ */
+
 
 /***/ }),
 
@@ -4915,6 +5186,9 @@ function assertOptions(options, schema, allowUnknown) {
 /* harmony import */ var _microsoft_sp_lodash_subset__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @microsoft/sp-lodash-subset */ "Pk8u");
 /* harmony import */ var _microsoft_sp_lodash_subset__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_microsoft_sp_lodash_subset__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Geselsie__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Geselsie */ "P9J0");
+/* harmony import */ var _api_talk__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../api/talk */ "qrG0");
+/* harmony import */ var _tools_guid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../tools/guid */ "zZ1J");
+/* harmony import */ var _toolshed_services_r_route__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @toolshed/services/r-route */ "uIiO");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -4930,36 +5204,122 @@ var __extends = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
 
 
 
 
 var Klasie = /** @class */ (function (_super) {
     __extends(Klasie, _super);
-    function Klasie() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function Klasie(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = __assign(__assign({}, props), { initData: null, REST: new _toolshed_services_r_route__WEBPACK_IMPORTED_MODULE_6__[/* REST */ "a"](_this.props.context), cnvId: Object(_tools_guid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"])() });
+        _this.init = _this.init.bind(_this);
+        return _this;
     }
+    Klasie.prototype.componentDidMount = function () {
+        console.log("Component did mount");
+        this.init();
+    };
+    Klasie.prototype.init = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var initConv, v, error_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        initConv = {
+                            role: "system",
+                            content: "Jy is 'n afrikaansprekende- (nie \"Hollands\") hulpvaardige- assistent wat kinders help met hulle vra. Moenie enige nederlandse/hollandse woorde gebruik nie.",
+                        };
+                        return [4 /*yield*/, Object(_api_talk__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])([initConv], "gpt-3.5-turbo", this.state.REST, this.state.cnvId)];
+                    case 1:
+                        v = _a.sent();
+                        this.setState({
+                            initData: v,
+                        });
+                        return [3 /*break*/, 3];
+                    case 2:
+                        error_1 = _a.sent();
+                        if (error_1 instanceof Error) {
+                            alert(error_1.message);
+                        }
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
     Klasie.prototype.render = function () {
         var _a = this.props, description = _a.description, GPTModel = _a.GPTModel, isDarkTheme = _a.isDarkTheme, environmentMessage = _a.environmentMessage, hasTeamsContext = _a.hasTeamsContext, userDisplayName = _a.userDisplayName;
         isDarkTheme ? console.log("Dark") : console.log("Light");
-        console.log(environmentMessage);
-        return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("section", { className: "".concat(_Klasie_module_scss__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].main, " ").concat(hasTeamsContext ? _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].teams : "") },
+        var _b = this.state, initData = _b.initData, cnvId = _b.cnvId, REST = _b.REST;
+        return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, initData ? (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("section", { className: "".concat(_Klasie_module_scss__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].main, " ").concat(hasTeamsContext ? _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].teams : "") },
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null,
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h2", null,
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].HideMe },
                     "Hi ",
                     Object(_microsoft_sp_lodash_subset__WEBPACK_IMPORTED_MODULE_2__["escape"])(userDisplayName),
                     "!"),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null,
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].HideMe },
                     "GPTModel:",
                     Object(_microsoft_sp_lodash_subset__WEBPACK_IMPORTED_MODULE_2__["escape"])(GPTModel),
                     "--"),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null,
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].HideMe },
                     "env:",
                     Object(_microsoft_sp_lodash_subset__WEBPACK_IMPORTED_MODULE_2__["escape"])(environmentMessage),
                     "--"),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null,
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _Klasie_module_scss__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].HideMe },
                     react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("strong", null, Object(_microsoft_sp_lodash_subset__WEBPACK_IMPORTED_MODULE_2__["escape"])(description))),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Geselsie__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], { GPTModel: "gpt-3.5-turbo", description: description }))));
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Geselsie__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], { cnv: initData, cnvId: cnvId, REST: REST })))) : (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, "Still loading"))));
     };
     return Klasie;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]));
@@ -5261,6 +5621,7 @@ var KlasieWebPart = /** @class */ (function (_super) {
             hasTeamsContext: !!this.context.sdks.microsoftTeams,
             userDisplayName: this.context.pageContext.user.displayName,
             GPTModel: this.properties.GPTModel,
+            context: this.context,
         });
         react_dom__WEBPACK_IMPORTED_MODULE_1__["render"](element, this.domElement);
     };
@@ -5274,26 +5635,18 @@ var KlasieWebPart = /** @class */ (function (_super) {
         var _this = this;
         if (!!this.context.sdks.microsoftTeams) {
             // running in Teams, office.com or Outlook
-            return this.context.sdks.microsoftTeams.teamsJs.app
-                .getContext()
-                .then(function (context) {
+            return this.context.sdks.microsoftTeams.teamsJs.app.getContext().then(function (context) {
                 var environmentMessage = "";
                 switch (context.app.host.name) {
                     case "Office": // running in Office
-                        environmentMessage = _this.context.isServedFromLocalhost
-                            ? KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppLocalEnvironmentOffice"]
-                            : KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppOfficeEnvironment"];
+                        environmentMessage = _this.context.isServedFromLocalhost ? KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppLocalEnvironmentOffice"] : KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppOfficeEnvironment"];
                         break;
                     case "Outlook": // running in Outlook
-                        environmentMessage = _this.context.isServedFromLocalhost
-                            ? KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppLocalEnvironmentOutlook"]
-                            : KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppOutlookEnvironment"];
+                        environmentMessage = _this.context.isServedFromLocalhost ? KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppLocalEnvironmentOutlook"] : KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppOutlookEnvironment"];
                         break;
                     case "Teams": // running in Teams
                     case "TeamsModern":
-                        environmentMessage = _this.context.isServedFromLocalhost
-                            ? KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppLocalEnvironmentTeams"]
-                            : KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppTeamsTabEnvironment"];
+                        environmentMessage = _this.context.isServedFromLocalhost ? KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppLocalEnvironmentTeams"] : KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppTeamsTabEnvironment"];
                         break;
                     default:
                         environmentMessage = KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["UnknownEnvironment"];
@@ -5301,9 +5654,7 @@ var KlasieWebPart = /** @class */ (function (_super) {
                 return environmentMessage;
             });
         }
-        return Promise.resolve(this.context.isServedFromLocalhost
-            ? KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppLocalEnvironmentSharePoint"]
-            : KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppSharePointEnvironment"]);
+        return Promise.resolve(this.context.isServedFromLocalhost ? KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppLocalEnvironmentSharePoint"] : KlasieWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppSharePointEnvironment"]);
     };
     KlasieWebPart.prototype.onThemeChanged = function (currentTheme) {
         if (!currentTheme) {
@@ -5381,6 +5732,7 @@ var KlasieWebPart = /** @class */ (function (_super) {
 
 "use strict";
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "zuR4");
+/* harmony import */ var _toolshed_services_r_methods__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @toolshed/services/r-methods */ "dVsX");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -5418,48 +5770,70 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     }
 };
 
-// function talkagpt(
-//   apikey = "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"
-// ) {
-//   // Create an axios instance for OpenAI API with the necessary headers
-//   const openAiClient = axios.create({
-//     baseURL: "https://api.openai.com", // Base URL for OpenAI API
-//     headers: {
-//       Authorization: `Bearer ${apikey}`,
-//       "Content-Type": "application/json",
-//     },
-//   });
-//   // Parameters for the API request
-//   const requestParams = {
-//     prompt: "How are you?",
-//     model: "gpt-3.5-turbo", // Specify the model you're using, in this case, it's GPT-3.5-turbo
-//     max_tokens: 10,
-//     temperature: 0,
-//   };
-//   // Performing the POST request to the completions endpoint with the parameters
-//   openAiClient
-//     .post("/v1/completions", requestParams)
-//     .then((response) => {
-//       // Handling successful response - logging the response data
-//       console.log(response.data);
-//     })
-//     .catch((error) => {
-//       // Handling errors - logging the error message
-//       console.error("Error:", error);
-//     });
-// }
-function bridgedGap(q, model) {
+
+function bridgedGap(conversation, model, r, cnvId) {
     return __awaiter(this, void 0, void 0, function () {
-        var praatKlasie;
+        var response, errMessage, praatKlasie, answered, replied, error_1;
         return __generator(this, function (_a) {
-            praatKlasie = axios__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].create({
-                baseURL: "https://localhost",
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json",
-                },
-            });
-            return [2 /*return*/, praatKlasie.post("/ask?model=".concat(model), q)];
+            switch (_a.label) {
+                case 0:
+                    _a.trys.push([0, 6, , 7]);
+                    praatKlasie = axios__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].create({
+                        baseURL: "https://klaas.arendt.co.za",
+                        headers: {
+                            Accept: "application/json",
+                            "Content-Type": "application/json",
+                            "x-client-key": "klk414T#",
+                        },
+                    });
+                    console.log("This is submitted!");
+                    console.dir(conversation);
+                    console.dir(r);
+                    return [4 /*yield*/, r.CreateItem(new _toolshed_services_r_methods__WEBPACK_IMPORTED_MODULE_1__[/* r_itemFromList */ "b"]("sysConversations"), {
+                            Title: "asked",
+                            conversationId: cnvId,
+                            role: conversation[conversation.length - 1].role,
+                            what: conversation[conversation.length - 1].content,
+                        })];
+                case 1:
+                    _a.sent();
+                    console.log("ASK ADDED");
+                    return [4 /*yield*/, praatKlasie.post("/submit-data?model=".concat(model), conversation)];
+                case 2:
+                    response = _a.sent();
+                    if (!(response && response.data)) return [3 /*break*/, 4];
+                    answered = response.data;
+                    replied = {
+                        Title: "answered",
+                        conversationId: cnvId,
+                        role: answered[answered.length - 1].role,
+                        what: answered[answered.length - 1].content,
+                    };
+                    console.dir(replied);
+                    return [4 /*yield*/, r.CreateItem(new _toolshed_services_r_methods__WEBPACK_IMPORTED_MODULE_1__[/* r_itemFromList */ "b"]("sysConversations"), replied)];
+                case 3:
+                    _a.sent();
+                    console.log("REPLY ADDED");
+                    console.log("This is replied:");
+                    console.dir(response === null || response === void 0 ? void 0 : response.data);
+                    return [3 /*break*/, 5];
+                case 4: throw new Error("invalid response from server");
+                case 5: return [3 /*break*/, 7];
+                case 6:
+                    error_1 = _a.sent();
+                    if (error_1 instanceof Error) {
+                        alert(error_1.message);
+                        response = null;
+                        errMessage = error_1.message;
+                    }
+                    return [3 /*break*/, 7];
+                case 7: return [2 /*return*/, new Promise(function (resolve, reject) {
+                        if (response)
+                            resolve(response.data);
+                        else
+                            reject(errMessage);
+                    })];
+            }
         });
     });
 }
@@ -5794,6 +6168,203 @@ function parseProtocol(url) {
 
 /***/ }),
 
+/***/ "uIiO":
+/*!*******************************************!*\
+  !*** ./lib/@toolshed/services/r-route.js ***!
+  \*******************************************/
+/*! exports provided: REST */
+/*! exports used: REST */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return REST; });
+/* harmony import */ var _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/sp-http */ "vlQI");
+/* harmony import */ var _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_microsoft_sp_http__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _r_methods__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./r-methods */ "dVsX");
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+var REST = /** @class */ (function () {
+    function REST(context) {
+        this.context = context;
+        this.requestHeaders = new Headers();
+    }
+    REST.prototype.GetEntityTypeName = function (ListName) {
+        return __awaiter(this, void 0, void 0, function () {
+            var r;
+            return __generator(this, function (_a) {
+                r = new _r_methods__WEBPACK_IMPORTED_MODULE_1__[/* r_common */ "a"]("web/lists/getbytitle('".concat(ListName, "')/listItemEntityTypeFullName"));
+                return [2 /*return*/, this.GET(r)];
+            });
+        });
+    };
+    REST.prototype.GET = function (method) {
+        return __awaiter(this, void 0, void 0, function () {
+            var opts, sphtpr;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.requestHeaders.append("Accept", "application/json;odata=nometadata");
+                        this.requestHeaders.append("odata-version", "");
+                        opts = {
+                            headers: this.requestHeaders,
+                        };
+                        this.routeUsed = "".concat(this.context.pageContext.web.absoluteUrl, "/_api/").concat(method.URI);
+                        return [4 /*yield*/, this.context.spHttpClient.get(this.routeUsed, _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_0__["SPHttpClient"].configurations.v1, opts)];
+                    case 1:
+                        sphtpr = _a.sent();
+                        return [2 /*return*/, sphtpr.json()];
+                }
+            });
+        });
+    };
+    REST.prototype.GETAdv = function (method) {
+        return __awaiter(this, void 0, void 0, function () {
+            var opts, sphtpr;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.requestHeaders.append("Accept", "application/json;odata=nometadata");
+                        this.requestHeaders.append("odata-version", "");
+                        opts = {
+                            headers: this.requestHeaders,
+                        };
+                        return [4 /*yield*/, this.context.spHttpClient.get(method, _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_0__["SPHttpClient"].configurations.v1, opts)];
+                    case 1:
+                        sphtpr = _a.sent();
+                        return [2 /*return*/, sphtpr.json()];
+                }
+            });
+        });
+    };
+    REST.prototype.PostArrayBuffer = function (method, payload) {
+        return __awaiter(this, void 0, void 0, function () {
+            var file, requestOptions;
+            return __generator(this, function (_a) {
+                if (payload instanceof ArrayBuffer) {
+                    file = new Blob([payload], { type: "application/octet-stream" });
+                    this.requestHeaders.append("Content-Type", file.type); // Set the appropriate content type for the Blob or File
+                    requestOptions = {
+                        headers: this.requestHeaders,
+                        body: payload, // Set the Blob or File as the request body
+                    };
+                    this.routeUsed = "".concat(this.context.pageContext.web.absoluteUrl, "/_api").concat(method.URI);
+                    return [2 /*return*/, this.context.spHttpClient.post(this.routeUsed, _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_0__["SPHttpClient"].configurations.v1, requestOptions)];
+                }
+                else {
+                    throw new TypeError("Can only handle ArrayBuffer for the moment!");
+                }
+                return [2 /*return*/];
+            });
+        });
+    };
+    REST.prototype.CreateItem = function (method, payload) {
+        return __awaiter(this, void 0, void 0, function () {
+            var entitytypename, options, response;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.GetEntityTypeName(method.ListName)];
+                    case 1:
+                        entitytypename = (_a.sent());
+                        console.log("EntityTypeName: ".concat(entitytypename.value));
+                        this.routeUsed = "".concat(this.context.pageContext.web.absoluteUrl, "/_api").concat(method.URI, "/Items");
+                        console.log("Route Used: ".concat(this.routeUsed));
+                        options = {
+                            headers: {
+                                Accept: "application/json;odata=nometadata",
+                                "Content-Type": "application/json;odata=verbose",
+                                "OData-Version": "",
+                            },
+                            body: JSON.stringify(__assign({ __metadata: { type: entitytypename.value } }, payload)),
+                        };
+                        return [4 /*yield*/, this.context.spHttpClient.post(this.routeUsed, _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_0__["SPHttpClient"].configurations.v1, options)];
+                    case 2:
+                        response = _a.sent();
+                        return [4 /*yield*/, response.json()];
+                    case 3: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    REST.prototype.UpdateItem = function (method, payload) {
+        return __awaiter(this, void 0, void 0, function () {
+            var entitytypename, body, options;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.GetEntityTypeName(method.ListName)];
+                    case 1:
+                        entitytypename = (_a.sent());
+                        this.routeUsed = "".concat(this.context.pageContext.web.absoluteUrl, "/_api/").concat(method.URI);
+                        body = JSON.stringify(__assign({ __metadata: { type: entitytypename.value } }, payload));
+                        options = {
+                            headers: {
+                                Accept: "application/json;odata=verbose",
+                                "Content-Type": "application/json;odata=verbose",
+                                "OData-Version": "3.0",
+                                "X-HTTP-Method": "MERGE",
+                                "If-Match": "*",
+                            },
+                            body: body,
+                        };
+                        return [4 /*yield*/, this.context.spHttpClient.post(this.routeUsed, _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_0__["SPHttpClient"].configurations.v1, options)];
+                    case 2: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    return REST;
+}());
+
+
+
+/***/ }),
+
 /***/ "uSK+":
 /*!****************************************************************!*\
   !*** ./node_modules/axios/lib/helpers/AxiosURLSearchParams.js ***!
@@ -5895,6 +6466,18 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+
+/***/ "vlQI":
+/*!*************************************!*\
+  !*** external "@microsoft/sp-http" ***!
+  \*************************************/
+/*! no static exports found */
+/*! exports used: SPHttpClient */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_vlQI__;
 
 /***/ }),
 
@@ -7177,18 +7760,22 @@ const isThenable = (thing) =>
 
 /***/ }),
 
-/***/ "zfKz":
-/*!**********************************************!*\
-  !*** ./lib/webparts/klasie/tools/cleanup.js ***!
-  \**********************************************/
-/*! exports provided: cleanup */
-/*! exports used: cleanup */
+/***/ "zZ1J":
+/*!*******************************************!*\
+  !*** ./lib/webparts/klasie/tools/guid.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/*! exports used: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return cleanup; });
-function cleanup(rawString) {
-    return rawString.split("\n").join("<br/>");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return generateGUID; });
+function generateGUID() {
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+        var r = (Math.random() * 16) | 0;
+        var v = c === "x" ? r : (r & 0x3) | 0x8;
+        return v.toString(16);
+    });
 }
 
 

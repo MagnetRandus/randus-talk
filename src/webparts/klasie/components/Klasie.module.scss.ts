@@ -1,17 +1,18 @@
 /* tslint:disable */
 require("./Klasie.module.css");
 const styles = {
-  main: 'main_7c78a996',
-  teams: 'teams_7c78a996',
-  links: 'links_7c78a996',
-  QVersation: 'QVersation_7c78a996',
-  assistant: 'assistant_7c78a996',
-  function: 'function_7c78a996',
-  system: 'system_7c78a996',
-  user: 'user_7c78a996',
-  Controls: 'Controls_7c78a996',
-  PraatHier: 'PraatHier_7c78a996',
-  Comms: 'Comms_7c78a996'
+  main: 'main_bea6fb22',
+  teams: 'teams_bea6fb22',
+  interface: 'interface_bea6fb22',
+  links: 'links_bea6fb22',
+  assistant: 'assistant_bea6fb22',
+  function: 'function_bea6fb22',
+  system: 'system_bea6fb22',
+  user: 'user_bea6fb22',
+  HideMe: 'HideMe_bea6fb22',
+  PraatHier: 'PraatHier_bea6fb22',
+  Comms: 'Comms_bea6fb22',
+  Stuur: 'Stuur_bea6fb22'
 };
 
 export default styles;

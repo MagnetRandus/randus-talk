@@ -10,6 +10,21 @@
   }
 }
 
+.interface {
+  width: 100%;
+  border: 1px solid #253259;
+  table {
+    width: -webkit-fill-availables;
+    td {
+      width: 50%;
+    }
+  }
+  textarea {
+    width: 100%;
+    background-color: rgba($color: #329759c0, $alpha: 0.5);
+  }
+}
+
 .links {
   a {
     text-decoration: none;
@@ -27,43 +42,17 @@
     }
   }
 }
-.QVersation {
-  text-align: left;
-  ul {
-    margin-left: 0px;
-    li {
-      display: inline-block;
-      width: auto;
-      padding: 4px;
-      border-radius: 12px;
-    }
-  }
-}
-
-// .Controls {
-//   padding-left: 43px;
-//   table {
-//     width: -webkit-fill-availables;
+// .QVersation {
+//   text-align: left;
+//   ul {
+//     margin-left: 0px;
+//     li {
+//       display: inline-block;
+//       width: auto;
+//       padding: 4px;
+//       border-radius: 12px;
+//     }
 //   }
-//   button {
-//     margin-left: 3px;
-//     margin-top: 15px;
-//   }
-//   .PraatHier {
-//     width: 250px;
-//   }
-//   .Comms {
-//     font-size: 13px;
-//     padding-top: 7px;
-//   }
-// }
-
-// .KiesPratie {
-//   color: inherit;
-// }
-
-// .CodeFrame {
-//   border: 1px solid yellow;
 // }
 
 .assistant {
@@ -79,22 +68,21 @@
   color: #808c89;
 }
 
-.Controls {
-  padding-left: 43px;
-  table {
-    width: -webkit-fill-availables;
-  }
-  button {
-    margin-left: 3px;
-    margin-top: 15px;
-  }
-  .PraatHier {
-    width: 250px;
-  }
-  .Comms {
-    font-size: 13px;
-    padding-top: 7px;
-  }
+.HideMe {
+  display: none;
+}
+
+.PraatHier {
+  width: 100%;
+  word-wrap: normal;
+  height: fit-content;
+}
+.Comms {
+  font-size: 13px;
+  padding-top: 7px;
+}
+.Stuur {
+  float: right;
 }
 
 // /*

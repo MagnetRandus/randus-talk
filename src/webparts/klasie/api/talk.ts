@@ -1,52 +1,69 @@
 import axios, { AxiosResponse } from "axios";
-import { ITalk } from "../components/types/talk";
+import { ITalk } from "../interfaces/talk";
+import { WebPartContext } from "@microsoft/sp-webpart-base";
+import { REST } from "@toolshed/services/r-route";
+import { r_itemFromList } from "@toolshed/services/r-methods";
+import { itmSysConversations } from "@interfaces/sysConversations";
+async function bridgedGap(conversation: ITalk[], model: string, r: REST<WebPartContext>, cnvId: string): Promise<ITalk[]> {
+  let response: AxiosResponse<ITalk[]> | null;
+  let errMessage: string;
 
-// function talkagpt(
-//   apikey = "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"
-// ) {
-//   // Create an axios instance for OpenAI API with the necessary headers
-//   const openAiClient = axios.create({
-//     baseURL: "https://api.openai.com", // Base URL for OpenAI API
-//     headers: {
-//       Authorization: `Bearer ${apikey}`,
-//       "Content-Type": "application/json",
-//     },
-//   });
+  try {
+    const praatKlasie = axios.create({
+      baseURL: "https://klaas.arendt.co.za", // Base URL for OpenAI API
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        "x-client-key": "klk414T#",
+      },
+    });
 
-//   // Parameters for the API request
-//   const requestParams = {
-//     prompt: "How are you?",
-//     model: "gpt-3.5-turbo", // Specify the model you're using, in this case, it's GPT-3.5-turbo
-//     max_tokens: 10,
-//     temperature: 0,
-//   };
+    console.log(`This is submitted!`);
+    console.dir(conversation);
+    console.dir(r);
 
-//   // Performing the POST request to the completions endpoint with the parameters
-//   openAiClient
-//     .post("/v1/completions", requestParams)
-//     .then((response) => {
-//       // Handling successful response - logging the response data
-//       console.log(response.data);
-//     })
-//     .catch((error) => {
-//       // Handling errors - logging the error message
-//       console.error("Error:", error);
-//     });
-// }
+    await r.CreateItem<itmSysConversations>(new r_itemFromList("sysConversations"), {
+      Title: "asked",
+      conversationId: cnvId,
+      role: conversation[conversation.length - 1].role,
+      what: conversation[conversation.length - 1].content,
+    });
 
-async function bridgedGap(
-  q: ITalk,
-  model: string
-): Promise<AxiosResponse<ITalk>> {
-  const praatKlasie = axios.create({
-    baseURL: "https://localhost", // Base URL for OpenAI API
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
+    console.log(`ASK ADDED`);
+
+    response = await praatKlasie.post(`/submit-data?model=${model}`, conversation);
+
+    if (response && response.data) {
+      const answered = response.data;
+
+      const replied = {
+        Title: "answered",
+        conversationId: cnvId,
+        role: answered[answered.length - 1].role,
+        what: answered[answered.length - 1].content,
+      };
+
+      console.dir(replied);
+
+      await r.CreateItem<itmSysConversations>(new r_itemFromList("sysConversations"), replied);
+
+      console.log(`REPLY ADDED`);
+      console.log(`This is replied:`);
+      console.dir(response?.data);
+    } else {
+      throw new Error("invalid response from server");
+    }
+  } catch (error) {
+    if (error instanceof Error) {
+      alert(error.message);
+      response = null;
+      errMessage = error.message;
+    }
+  }
+  return new Promise<ITalk[]>((resolve, reject) => {
+    if (response) resolve(response.data);
+    else reject(errMessage);
   });
-
-  return praatKlasie.post(`/ask?model=${model}`, q);
 }
 
 export default bridgedGap;

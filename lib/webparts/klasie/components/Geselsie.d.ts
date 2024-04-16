@@ -1,5 +1,5 @@
 import * as React from "react";
-import { IKlasieWebPartProps } from "./IKlasieProps";
-declare const Geselsie: React.FC<IKlasieWebPartProps>;
+import { initConv } from "./IKlasieProps";
+declare const Geselsie: React.FC<initConv>;
 export default Geselsie;
 //# sourceMappingURL=Geselsie.d.ts.map

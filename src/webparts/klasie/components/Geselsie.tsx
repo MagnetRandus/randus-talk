@@ -1,127 +1,124 @@
 import * as React from "react";
-
+import { useState, FormEvent, ChangeEvent } from "react";
 import bridgedGap from "../api/talk";
-import { ITalk } from "./types/talk";
+import { ITalk } from "../interfaces/talk";
+import { initConv } from "./IKlasieProps";
 import styles from "./Klasie.module.scss"; // Replace with your actual styles import
-import { IKlasieWebPartProps } from "./IKlasieProps";
-import { cleanup } from "../tools/cleanup";
 
-const Geselsie: React.FC<IKlasieWebPartProps> = ({ GPTModel }) => {
-  const [myAsk, setMyAsk] = React.useState<ITalk>();
+const Geselsie: React.FC<initConv> = ({ cnv, cnvId, REST }) => {
+  const [inputValue, setInputValue] = useState<string>("Ek wil graag 'n troeteldier hê, wat sal jy voorstel is 'n goeie een vir 'n beginner?");
+  const [conversation, setConversation] = useState<Array<ITalk>>(cnv);
 
   const [comms, setComms] = React.useState<string>(`Resting`);
 
-  const [qVersation, setQVersation] = React.useState<Array<ITalk>>([
-    {
-      role: "system",
-      content:
-        "Your name is Klasie and you are a helpful assistant that speaks Afrikaans.",
-    },
-  ]);
+  const refLastAnswer = React.useRef<HTMLDivElement>(null);
+  const refComms = React.useRef<HTMLDivElement>(null);
+  const refAsk = React.useRef<HTMLTextAreaElement>(null);
+  const refVra = React.useRef<HTMLButtonElement>(null);
 
-  const engage = async (): Promise<void> => {
-    if (!myAsk) return; // Safety check
+  const handleInputChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setComms("Asking");
 
     try {
-      setComms("Asking");
+      const q = {
+        role: "user",
+        content: inputValue,
+      } as ITalk;
 
-      const response = await bridgedGap(myAsk, GPTModel);
+      const response = await bridgedGap([...conversation, q], "gpt-3.5-turbo", REST, cnvId);
 
+      setConversation(response);
       setComms("Answered");
-
-      setQVersation((prevQVersation) => [
-        ...prevQVersation,
-        myAsk,
-        response.data,
-      ]);
-    } catch (error) {
-      console.error("Error calling OpenAI's API:", error);
-      setComms("Error");
+    } catch (err) {
+      if (err instanceof Error) setComms(err.message);
     }
   };
 
-  const refComms = React.useRef<HTMLDivElement>(null);
-  const refVra = React.useRef<HTMLButtonElement>(null);
-  const refAsk = React.useRef<HTMLInputElement>(null);
+  React.useEffect(() => {
+    if (refLastAnswer.current) {
+      refLastAnswer.current.innerHTML = conversation.slice(-1)[0].content;
+    }
+  }, [conversation]);
 
   return (
-    <div>
-      <div className={styles.main}>
-        <section>
-          <h3>Kl@sie</h3>
-          <div className={styles.QVersation}>
-            <ul>
-              {qVersation
-                .filter((h) => h.role !== "system")
-                .map((h, i) => (
-                  <li key={i} className={`${styles[h.role]}`}>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: cleanup(String(h.content)),
-                      }}
-                    />
-                  </li>
-                ))}
-            </ul>
-
-            <section className={styles.Controls}>
-              <table>
-                <tbody>
-                  <tr>
-                    <td>
-                      <input
-                        type="text"
-                        name="PraatHier"
-                        id="PraatHier"
-                        placeholder="Praat hier"
-                        ref={refAsk}
-                        className={styles.PraatHier}
-                        onKeyUp={(ev) => {
-                          if (ev.key == "Enter") {
-                            if (refVra.current) {
-                              refVra.current.click();
-                            }
-                          }
-                        }}
-                        onChange={(ev) => {
-                          setComms("Typing");
-                          setMyAsk({
-                            role: "user",
-                            content: `${ev.target.value}`,
-                          });
-                        }}
-                      />
-                    </td>
-                    <td>
-                      <div>
-                        <div ref={refComms} className={styles.Comms}>
-                          {comms}
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button
-                        ref={refVra}
-                        type="button"
-                        onClick={() => {
-                          engage();
-                          if (refAsk.current) refAsk.current.value = "";
-                        }}
-                      >
-                        Praat
-                      </button>
-                    </td>
-                    <td>&nbsp;</td>
-                  </tr>
-                </tbody>
-              </table>
-            </section>
-          </div>
-        </section>
-      </div>
-    </div>
+    <form className={styles.main} onSubmit={handleSubmit}>
+      <table className={styles.interface}>
+        <thead>
+          <tr>
+            <td>Conversation Id:</td>
+            <td>{cnvId}</td>
+          </tr>
+          <tr>
+            <td>Comms</td>
+            <td>
+              <div ref={refComms} className={styles.Comms}>
+                {comms}
+              </div>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colSpan={2}>
+              <h3>Gebruiker</h3>
+            </td>
+          </tr>
+          <tr>
+            <td colSpan={2}>
+              <textarea
+                name="PraatHier"
+                id="PraatHier"
+                placeholder="Praat hier"
+                ref={refAsk}
+                className={styles.PraatHier}
+                onKeyUp={ev => {
+                  if (ev.key == "Enter") {
+                    if (refVra.current) {
+                      refVra.current.click();
+                    }
+                  }
+                }}
+                onChange={ev => {
+                  setComms("Typing");
+                  handleInputChange(ev);
+                }}
+                value={inputValue}
+              />
+              <br />
+              <br />
+              <button type="submit" className={styles.Stuur}>
+                Stuur vraag
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td colSpan={2}>
+              <h3>Kunsmatige Intelligensie</h3>
+            </td>
+          </tr>
+          <tr>
+            <td colSpan={2}>
+              <div lang="af" ref={refLastAnswer} contentEditable="true" suppressContentEditableWarning={true}>
+                {refLastAnswer.current ? conversation.slice(-1)[0].content : "Nothing yet..."}
+              </div>
+              {/* <textarea
+                ref={refLastAnswer}
+                value={
+                  refLastAnswer.current
+                    ? conversation.slice(-1)[0].content
+                    : `Nothing yet...`
+                }
+              /> */}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
   );
 };
 

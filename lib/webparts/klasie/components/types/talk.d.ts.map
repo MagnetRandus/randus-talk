@@ -1,1 +1,0 @@
-{"version":3,"file":"talk.d.ts","sourceRoot":"","sources":["../../../../../src/webparts/klasie/components/types/talk.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,KAAK;IACpB,IAAI,EAAE,MAAM,GAAG,QAAQ,GAAG,WAAW,CAAC;IACtC,OAAO,EAAE,MAAM,CAAC;CACjB;AAED,MAAM,WAAW,SAAS;IACxB,OAAO,EAAE,KAAK,CAAC;QAAE,OAAO,EAAE,KAAK,CAAA;KAAE,CAAC,CAAC;CACpC"}
